@@ -15,15 +15,31 @@
     .divider-sm { height: 1px; background: #eeece8; margin: 0 0 1.5rem; }
     h1 { font-size: clamp(20px, 5vw, 26px); font-weight: 700; color: #1a1917; margin: 0 0 0.75rem; }
     .subtitle { font-size: clamp(13px, 3.5vw, 15px); font-weight: 400; color: #6b6a67; line-height: 1.65; margin: 0 0 1.75rem; }
-    .btn { display: flex; align-items: center; gap: 14px; width: 100%; padding: clamp(0.85rem, 3vw, 1.1rem) 1.1rem; border-radius: 13px; border: 1px solid #d4560f; background: #004a5d; cursor: pointer; text-align: left; text-decoration: none; transition: border-color 0.15s, background 0.15s, transform 0.12s, box-shadow 0.15s; margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-    .btn:hover { border-color: #c04d0a; background: #e07d1a; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .btn {
+      display: flex; align-items: center; gap: 14px; width: 100%;
+      padding: clamp(0.85rem, 3vw, 1.1rem) 1.1rem;
+      border-radius: 13px;
+      border: 1px solid #d4560f;
+      background: #F0902A !important;
+      cursor: pointer; text-align: left; text-decoration: none;
+      transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      color: #ffffff !important;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:link, .btn:visited, .btn:hover, .btn:active, .btn:focus {
+      background: #F0902A !important;
+      color: #ffffff !important;
+      text-decoration: none;
+      border-color: #d4560f;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
     .btn:active { transform: scale(0.99); }
-    .btn-icon { width: clamp(38px, 10vw, 46px); height: clamp(38px, 10vw, 46px); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .btn-icon.positive { background: rgba(255,255,255,0.25); }
-    .btn-icon.negative { background: rgba(255,255,255,0.25); }
+    .btn-icon { width: clamp(38px, 10vw, 46px); height: clamp(38px, 10vw, 46px); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: rgba(255,255,255,0.25); }
     .btn-text { flex: 1; }
-    .btn-label { font-size: clamp(13px, 3.8vw, 15px); font-weight: 600; color: #ffffff; display: block; margin-bottom: 3px; }
-    .btn-sub { font-size: clamp(11px, 3vw, 13px); font-weight: 400; color: rgba(255,255,255,0.8); display: block; }
+    .btn-label { font-size: clamp(13px, 3.8vw, 15px); font-weight: 600; color: #ffffff !important; display: block; margin-bottom: 3px; }
+    .btn-sub { font-size: clamp(11px, 3vw, 13px); font-weight: 400; color: rgba(255,255,255,0.85) !important; display: block; }
     .btn-arrow { color: rgba(255,255,255,0.7); font-size: 22px; flex-shrink: 0; line-height: 1; }
     .footer { font-size: 11px; font-weight: 500; color: #ffffff; margin-top: 1.5rem; letter-spacing: 0.03em; text-transform: uppercase; opacity: 0.8; }
     @media (min-width: 600px) { .card { padding: 3rem 3rem 2.5rem; } .btn { padding: 1.1rem 1.25rem; gap: 18px; } }
@@ -38,9 +54,8 @@
     <h1>Beoordeel ons!</h1>
     <p class="subtitle">Wij waarderen je eerlijke beoordeling. Zo help je ons en toekomstige klanten de juiste keuze te maken.</p>
     <div class="divider-sm"></div>
-
-    <a href="https://nl.trustpilot.com/evaluate/www.autovdheide.nl" class="btn" id="review-btn" target="_blank" rel="noopener">
-      <div class="btn-icon positive">
+    <a href="https://nl.trustpilot.com/evaluate/www.autovdheide.nl" class="btn" target="_blank" rel="noopener">
+      <div class="btn-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/>
           <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
@@ -52,9 +67,8 @@
       </div>
       <span class="btn-arrow">&#8250;</span>
     </a>
-
     <a href="https://www.autovdheide.nl/klachten" class="btn" target="_blank" rel="noopener">
-      <div class="btn-icon negative">
+      <div class="btn-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="M2 7l10 7 10-7"/>
@@ -66,7 +80,6 @@
       </div>
       <span class="btn-arrow">&#8250;</span>
     </a>
-
     <p class="footer">Autobedrijf Van der Heide</p>
   </div>
 </body>
